@@ -11,6 +11,7 @@ import Testimonials from "../components/testimonials";
 import Cta from "../components/cta";
 import Faq from "../components/faq";
 import PopupWidget from "../components/popupWidget";
+import AutoScrollCarousel from "../components/AutoScrollCarousel";
 
 //import dynamic from "next/dynamic";
 
@@ -23,6 +24,7 @@ import PopupWidget from "../components/popupWidget";
 // const Faq = dynamic(() => import("../components/faq"));
 
 // const PopupWidget = dynamic(() => import("../components/popupWidget"));
+
 
 export default function Home() {
   return (
@@ -45,13 +47,82 @@ export default function Home() {
 
       <Navbar />
       <Hero />
-      <SectionTitle
-        pretitle="Energy Partner Benefits"
-        title=" Why should you use this landing page">
-        Nextly is a free landing page & marketing website template for startups
-        and indie projects. Its built with Next.js & TailwindCSS. And its
-        completely open-source.
+      <div class="flex justify-center">
+        <div className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-indigo-800 lg:leading-tight lg:text-4xl dark:text-white">
+          Industries We Serve
+        </div>
+      </div>
+      <AutoScrollCarousel scrollSpeed={1} className="my-custom-class">
+        <div className="mx-[5%]">
+      <SectionTitle className="break-words"  title="Buildings & Factories">
+        FMCG projects and industrial facilities
       </SectionTitle>
+        </div>
+        <div className="mx-[5%]">
+      <SectionTitle className="break-words"  title="Oil & Gas">
+        FPSO, LNG, Offshore Jackets, Brownfield, Petrochemicals, Refinery
+      </SectionTitle>
+      </div>
+      <div className="mx-[5%]">
+      <SectionTitle className="break-words"  title="Metals & Mining">
+        Copper smelters and heavy industries
+      </SectionTitle>
+      </div>
+      <div className="mx-[5%]">
+      <SectionTitle className="break-words"  title="Buildings & Factories">
+        FMCG projects and industrial facilities
+      </SectionTitle>
+      </div>
+      <div className="mx-[5%]">
+      <SectionTitle className="break-words"  title="Oil & Gas">
+        FPSO, LNG, Offshore Jackets, Brownfield, Petrochemicals, Refinery
+      </SectionTitle>
+      </div>
+      <div className="mx-[5%]">
+      <SectionTitle className="break-words"  title="Metals & Mining" >
+        Copper smelters and heavy industries
+      </SectionTitle>
+      </div>
+    </AutoScrollCarousel>
+
+      <div class="flex justify-center">
+        <div className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-indigo-800 lg:leading-tight lg:text-4xl dark:text-white">
+          Products & Solutions
+        </div>
+      </div>
+      <AutoScrollCarousel scrollSpeed={1} className="my-custom-class">
+        <div className="mx-[5%]">
+        <SectionTitle className="break-words" title="Piping & Valves">
+          Ball, GGC, Axial Flow, Butterfly, Dual Plate Check, Control Valves, Piping Spool Fabrication.
+        </SectionTitle>
+        </div>
+        <div className="mx-[5%]">
+        <SectionTitle className="break-words"  title="Packages">
+          HVAC, Cranes, Skids, E-Houses, Power Distribution Centers
+        </SectionTitle>
+        </div>
+        <div className="mx-[5%]">
+        <SectionTitle className="break-words"  title="Specialty Products">
+          Steam Drums, Heat Exchangers, Expansion Joints, Dampers, Flame Arrestors, Ducting
+        </SectionTitle>
+        </div>
+        <div className="mx-[5%]">
+        <SectionTitle className="break-words"  title="Piping & Valves">
+          Ball, GGC, Axial Flow, Butterfly, Dual Plate Check, Control Valves, Piping Spool Fabrication.
+        </SectionTitle>
+        </div>
+        <div className="mx-[5%]">
+        <SectionTitle className="break-words"  title="Packages">
+          HVAC, Cranes, Skids, E-Houses, Power Distribution Centers
+        </SectionTitle>
+        </div>
+        <div className="mx-[5%]">
+        <SectionTitle className="break-words"  title="Specialty Products">
+          Steam Drums, Heat Exchangers, Expansion Joints, Dampers, Flame Arrestors, Ducting
+        </SectionTitle>
+        </div>
+      </AutoScrollCarousel>
+
       <Benefits data={benefitOne} />
       <Benefits imgPos="right" data={benefitTwo} />
       <SectionTitle

@@ -18,7 +18,7 @@ export default function Hero() {
               Delivering world-class engineering products, packages, and services with trust, transparency, and expertise.
             </p>
 
-            <div className="flex flex-col items-start space-x-3 space-y-3 sm:space-y-0 sm:items-center sm:flex-row">
+            <div className="flex flex-col items-start gap-3 sm:space-y-0 sm:items-center sm:flex-row">
               <a
                 href="mailto:energypartner1@outlook.com"
                 target="_blank"

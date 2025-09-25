@@ -5,7 +5,7 @@
   "homepage": "https://krutarthchovatiya.github.io/energypartner",
   "private": true,
   "scripts": {
-    "dev": "set NODE_OPTIONS=--openssl-legacy-provider && next dev",
+    "dev": "cross-env NODE_OPTIONS=--openssl-legacy-provider next dev",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "build": "next build && next export",
@@ -41,6 +41,7 @@
     "autoprefixer": "^10.0.4",
     "babel-plugin-macros": "^3.1.0",
     "babel-plugin-twin": "^1.0.2",
+    "cross-env": "^10.0.0",
     "gh-pages": "^6.3.0",
     "postcss": "^8.1.10",
     "tailwindcss": "^2.2.2",

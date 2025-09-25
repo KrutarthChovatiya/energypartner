@@ -48,7 +48,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <div class="flex justify-center">
-        <div className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-indigo-800 lg:leading-tight lg:text-4xl dark:text-white">
+        <div className="max-w-2xl mt-1 text-3xl font-bold leading-snug tracking-tight text-indigo-800 lg:leading-tight lg:text-5xl dark:text-white">
           Industries We Serve
         </div>
       </div>
@@ -86,7 +86,7 @@ export default function Home() {
     </AutoScrollCarousel>
 
       <div class="flex justify-center">
-        <div className="max-w-2xl mt-5 text-3xl font-bold leading-snug tracking-tight text-indigo-800 lg:leading-tight lg:text-4xl dark:text-white">
+        <div className="max-w-2xl mt-10 text-3xl font-bold leading-snug tracking-tight text-indigo-800 lg:leading-tight lg:text-5xl dark:text-white">
           Products & Solutions
         </div>
       </div>

@@ -2,12 +2,17 @@ import Image from "next/image";
 import React from "react";
 import Container from "./container";
 
-import userOneImg from "../public/img/user1.jpg";
-import userTwoImg from "../public/img/user2.jpg";
-import userThreeImg from "../public/img/user3.jpg";
+// import userOneImg from "../public/img/user1.jpg";
+// import userTwoImg from "../public/img/user2.jpg";
+// import userThreeImg from "../public/img/user3.jpg";
+
+const userOneImg = "/img/user1.jpg";
+const userTwoImg = "/img/user2.jpg";
+const userThreeImg = "/img/user3.jpg";
 
 export default function Testimonials() {
   return (
+    
     <Container>
       <div className="grid gap-10 lg:grid-cols-2 xl:grid-cols-3">
         <div className="lg:col-span-2 xl:col-auto">
@@ -67,7 +72,7 @@ function Avatar(props) {
           height="40"
           alt="Avatar"
           layout="responsive"
-          placeholder="blur"
+          //placeholder="blur"
         />
       </div>
       <div>

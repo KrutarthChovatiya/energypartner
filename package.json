@@ -1,16 +1,13 @@
 {
   "name": "nextly-template",
   "version": "0.1.0",
-  "description": "Nextly Landing Page Template",
-  "homepage": "https://themewagon.github.io/nextly",
+  "description": "Energy Partner Landing Page Template",
+  "homepage": "https://krutarthchovatiya.github.io/energypartner",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build && next export",
-    "start": "next start",
-    "lint": "next lint",
+    "dev": "set NODE_OPTIONS=--openssl-legacy-provider && next dev",
     "predeploy": "npm run build",
-    "deploy": "touch out/.nojekyll && gh-pages -d out"
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",

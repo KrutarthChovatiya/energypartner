@@ -5,16 +5,13 @@
   "homepage": "https://krutarthchovatiya.github.io/energypartner",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build && next export",
-    "start": "next start",
-    "lint": "next lint",
+    "dev": "set NODE_OPTIONS=--openssl-legacy-provider && next dev",
     "predeploy": "npm run build",
-    "deploy": "touch out/.nojekyll && gh-pages -d out"
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/themewagon/nextly.git"
+    "url": "git+https://krutarthchovatiya.github.io/energypartner.git"
   },
   "keywords": [
     "nextjs",
@@ -53,8 +50,5 @@
       "preset": "emotion",
       "includeClassNames": true
     }
-  },
-    "scripts": {
-    "dev": "set NODE_OPTIONS=--openssl-legacy-provider && next dev"
   }
 }

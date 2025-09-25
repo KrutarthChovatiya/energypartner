@@ -4,7 +4,7 @@ import { Disclosure } from "@headlessui/react";
 import Image from "next/image";
 
 export default function Navbar() {
-  const navigation = ["Product", "Features", "Pricing", "Company", "Blog"];
+  const navigation = ["Product & Solution", "Business Model", "Key Achievements", "About Us", "Contact Us"];
 
   return (
     <div className="w-full">
@@ -90,11 +90,11 @@ export default function Navbar() {
         </div>
 
         <div className="hidden mr-3 space-x-3 lg:flex nav__item">
-          <Link href="#!">
+          {/* <Link href="#!">
             <a className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-5">
               Get Started
             </a>
-          </Link>
+          </Link> */}
 
           <ThemeChanger />
         </div>

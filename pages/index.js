@@ -86,7 +86,7 @@ export default function Home() {
     </AutoScrollCarousel>
 
       <div class="flex justify-center">
-        <div className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-indigo-800 lg:leading-tight lg:text-4xl dark:text-white">
+        <div className="max-w-2xl mt-5 text-3xl font-bold leading-snug tracking-tight text-indigo-800 lg:leading-tight lg:text-4xl dark:text-white">
           Products & Solutions
         </div>
       </div>
@@ -125,13 +125,6 @@ export default function Home() {
 
       <Benefits data={benefitOne} />
       <Benefits imgPos="right" data={benefitTwo} />
-      <SectionTitle
-        pretitle="Watch a video"
-        title="Learn how to fullfil your needs">
-        This section is to highlight a promo or demo video of your product.
-        Analysts says a landing page with video has 3% more conversion rate. So,
-        don't forget to add one. Just like this.
-      </SectionTitle>
       <Video />
       <SectionTitle
         pretitle="Testimonials"
@@ -145,7 +138,17 @@ export default function Home() {
         conversion rate as well as support or chat requests.
       </SectionTitle>
       <Faq />
-      <Cta />
+      <div class="flex justify-center">
+        <div className="max-w-2xl mt-1 text-3xl font-bold leading-snug tracking-tight text-indigo-800 lg:leading-tight lg:text-4xl dark:text-white">
+          About Us
+        </div>
+      </div>
+      <div class="flex justify-center">
+      <div className="max-w-5xl mt-1 text-3xl font-bold leading-normal text-gray-700 lg:text-xl xl:text-xl dark:text-gray-300 dark:text-white">
+        At <b>ENERGY PARTNER</b>, we are more than just a supplier — we are your trusted partner in delivering <b>engineering products and end-to-end solutions</b>. With <b>over a decade of expertise</b>, our team of seasoned technocrats provides high-quality, reliable, and tailored solutions across diverse industries. Our mission is to create a <b>single-window experience</b> for customers, simplifying complexities and ensuring smooth project execution.
+        </div>
+      </div>
+      {/* <Cta /> */}
       <Footer />
       <PopupWidget />
     </>

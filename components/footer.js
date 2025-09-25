@@ -4,7 +4,7 @@ import Container from "./container";
 import Image from "next/image";
 
 export default function Footer() {
-  const navigation = ["Product", "Features", "Pricing", "Company", "Blog"];
+  const navigation = ["Product & Solution", "Business Model", "Key Achievements", "About Us", "Contact Us"];
   const legal = ["Terms", "Privacy", "Legal"];
   return (
     <div className="relative">

@@ -22,6 +22,8 @@ module.exports = {
   },
   //assetPrefix: isProd ? '/energypartner/' : '',
   //basePath: isProd ? '/energypartner' : '',
-  basePath: '',
-  assetPrefix: ''
+  //basePath: '',
+  //assetPrefix: ''
+  basePath: isProd && process.env.VERCEL !== '1' ? '/energypartner' : '',
+  assetPrefix: isProd && process.env.VERCEL !== '1' ? '/energypartner/' : '',
 };

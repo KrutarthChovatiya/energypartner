@@ -2,7 +2,7 @@ import Image from "next/image";
 import Container from "./container";
 //import heroImg from "../public/img/hero.png";
 
-const heroImg = "/img/hero.png";
+const heroImg = "/images/hero.png";
 
 export default function Hero() {
   return (

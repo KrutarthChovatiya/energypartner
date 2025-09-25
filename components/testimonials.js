@@ -6,9 +6,9 @@ import Container from "./container";
 // import userTwoImg from "../public/img/user2.jpg";
 // import userThreeImg from "../public/img/user3.jpg";
 
-const userOneImg = "/img/user1.jpg";
-const userTwoImg = "/img/user2.jpg";
-const userThreeImg = "/img/user3.jpg";
+const userOneImg = "/images/user1.jpg";
+const userTwoImg = "/images/user2.jpg";
+const userThreeImg = "/images/user3.jpg";
 
 export default function Testimonials() {
   return (

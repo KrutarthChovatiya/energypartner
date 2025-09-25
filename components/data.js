@@ -10,8 +10,8 @@ import {
 //import benefitOneImg from "../public/img/benefit-one.png";
 //import benefitTwoImg from "../public/img/benefit-two.png";
 
-const benefitOneImg = "/img/benefit-one.png";
-const benefitTwoImg = "/img/benefit-two.png";
+const benefitOneImg = "/images/benefit-one.png";
+const benefitTwoImg = "/images/benefit-two.png";
 
 const benefitOne = {
   title: "Highlight your benefits",

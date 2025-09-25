@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,3 +9,15 @@
     @apply dark:bg-trueGray-900;
   }
 }
+=======
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    @apply dark:bg-trueGray-900;
+  }
+}
+>>>>>>> b1efac274cbe975a50509b3d7bf6ff81581302fe

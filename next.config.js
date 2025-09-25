@@ -15,9 +15,13 @@
 const isProd = process.env.NODE_ENV === 'production';
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-    assetPrefix: isProd ? '/nextly/' : '',
-    basePath: isProd ? '/nextly' : '',
-};
 
-module.exports = nextConfig;
+module.exports = {
+  reactStrictMode: true,
+  images: {
+    loader: 'akamai',  // Disable image optimization (required for `next export`)
+    path: '',          // Serve images from the root
+  },
+  assetPrefix: isProd ? '/energypartner/' : '',  // Needed for GitHub Pages
+  basePath: isProd ? '/energypartner' : '',      // Needed for GitHub Pages
+};

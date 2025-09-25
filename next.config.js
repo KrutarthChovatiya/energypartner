@@ -20,6 +20,8 @@ module.exports = {
     loader: 'akamai',
     path: '',
   },
-  assetPrefix: isProd ? '/energypartner/' : '',
-  basePath: isProd ? '/energypartner' : '',
+  //assetPrefix: isProd ? '/energypartner/' : '',
+  //basePath: isProd ? '/energypartner' : '',
+  basePath: '',
+  assetPrefix: ''
 };

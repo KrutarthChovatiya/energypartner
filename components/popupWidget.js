@@ -18,6 +18,7 @@ export default function PopupWidget() {
   const userName = useWatch({ control, name: "name", defaultValue: "Someone" });
 
   const onSubmit = async (data, e) => {
+    console.log("data", data)
   try {
     const response = await fetch("/api/contact", {
       method: "POST",

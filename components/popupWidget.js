@@ -11,6 +11,9 @@ export default function PopupWidget() {
     formState: { errors, isSubmitSuccessful, isSubmitting },
   } = useForm({
     mode: "onTouched",
+    defaultValues: {
+      name: "Someone",  // <-- set default value here
+    },
   });
   const [isSuccess, setIsSuccess] = useState(false);
   const [Message, setMessage] = useState("");
@@ -122,7 +125,7 @@ export default function PopupWidget() {
                         />
                         <input
                           type="hidden"
-                          value={`${userName} sent a message from Energy Partner website`}
+                          value={`${userName || "Someone"} sent a message from Energy Partner website`}
                           {...register("subject")}
                         />
                         <input

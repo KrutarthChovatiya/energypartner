@@ -18,33 +18,33 @@ export default function PopupWidget() {
   const userName = useWatch({ control, name: "name", defaultValue: "Someone" });
 
   const onSubmit = async (data, e) => {
-    console.log(data);
-    await fetch("https://api.web3forms.com/submit", {
+  try {
+    const response = await fetch("/api/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Accept: "application/json",
       },
-      body: JSON.stringify(data, null, 2),
-    })
-      .then(async (response) => {
-        let json = await response.json();
-        if (json.success) {
-          setIsSuccess(true);
-          setMessage(json.message);
-          e.target.reset();
-          reset();
-        } else {
-          setIsSuccess(false);
-          setMessage(json.message);
-        }
-      })
-      .catch((error) => {
-        setIsSuccess(false);
-        setMessage("Client Error. Please check the console.log for more info");
-        console.log(error);
-      });
-  };
+      body: JSON.stringify(data),
+    });
+
+    const json = await response.json();
+
+    if (json.success) {
+      setIsSuccess(true);
+      setMessage(json.message);
+      e.target.reset();
+      reset();
+    } else {
+      setIsSuccess(false);
+      setMessage(json.message || "Something went wrong.");
+    }
+  } catch (error) {
+    console.error(error);
+    setIsSuccess(false);
+    setMessage("Client Error. Please check the console for more info.");
+  }
+};
+
 
   return (
     <div>
@@ -116,17 +116,17 @@ export default function PopupWidget() {
                     <form onSubmit={handleSubmit(onSubmit)} noValidate>
                       <input
                         type="hidden"
-                        value="YOUR_ACCESS_KEY_HERE"
+                        value=""
                         {...register("apikey")}
                       />
                       <input
                         type="hidden"
-                        value={`${userName} sent a message from Nextly`}
+                        value={`${userName} sent a message from Energy Partner website`}
                         {...register("subject")}
                       />
                       <input
                         type="hidden"
-                        value="Nextly Template"
+                        value="Query from Energy Partner website"
                         {...register("from_name")}
                       />
                       <input
@@ -174,7 +174,7 @@ export default function PopupWidget() {
                           {...register("email", {
                             required: "Enter your email",
                             pattern: {
-                              value: /^\S+@\S+$/i,
+                              value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
                               message: "Please enter a valid email",
                             },
                           })}
@@ -189,6 +189,36 @@ export default function PopupWidget() {
                         {errors.email && (
                           <div className="mt-1 text-sm text-red-400 invalid-feedback">
                             {errors.email.message}
+                          </div>
+                        )}
+                      </div>
+
+                      <div className="mb-4">
+                        <label
+                          htmlFor="phone"
+                          className="block mb-2 text-sm text-gray-600 dark:text-gray-400">
+                          Phone
+                        </label>
+                        <input
+                          type="tel"
+                          id="phone"
+                          {...register("phone", {
+                            pattern: {
+                              value: /^[+\d]?(?:[\d-.\s()]*)$/,
+                              message: "Please enter a valid phone number",
+                            },
+                          })}
+                          placeholder="+1 (123) 456-7890"
+                          className={`w-full px-3 py-2 placeholder-gray-300 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring   ${
+                            errors.phone
+                              ? "border-red-600 focus:border-red-600 ring-red-100"
+                              : "border-gray-300 focus:border-indigo-600 ring-indigo-100"
+                          }`}
+                        />
+
+                        {errors.phone && (
+                          <div className="mt-1 text-sm text-red-400 invalid-feedback">
+                            {errors.phone.message}
                           </div>
                         )}
                       </div>
@@ -246,30 +276,6 @@ export default function PopupWidget() {
                           )}
                         </button>
                       </div>
-                      <p
-                        className="text-xs text-center text-gray-400"
-                        id="result">
-                        <span>
-                          Powered by{" "}
-                          <a
-                            href="https://Web3Forms.com"
-                            className="text-gray-600"
-                            target="_blank"
-                            rel="noopener noreferrer">
-                            Web3Forms
-                          </a>
-                        </span>
-                        <span className="block mt-1">
-                          Distributed By{" "}
-                          <a
-                            href="https://themewagon.com"
-                            className="text-gray-600"
-                            target="_blank"
-                            rel="noopener noreferrer">
-                            ThemeWagon
-                          </a>
-                        </span>
-                      </p>
                     </form>
                   )}
 

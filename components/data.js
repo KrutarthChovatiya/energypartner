@@ -1,11 +1,10 @@
 
-import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/solid";
-
 //import benefitOneImg from "../public/img/benefit-one.png";
 //import benefitTwoImg from "../public/img/benefit-two.png";
 
 const benefitOneImg = "/images/benefit-one.png";
 const benefitTwoImg = "/images/benefit-two.png";
+const benefitThreeImg = "/images/benefit-three.png";
 
 const benefitOne = {
   title: "Business Model",
@@ -16,7 +15,7 @@ const benefitOne = {
       title: "Secure and confidential negotiations",
       desc: "Safe, private, and trusted deal-making",
       icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="size-4">
-  <path fillRule="evenodd" d="M8.5 1.709a.75.75 0 0 0-1 0 8.963 8.963 0 0 1-4.84 2.217.75.75 0 0 0-.654.72 10.499 10.499 0 0 0 5.647 9.672.75.75 0 0 0 .694-.001 10.499 10.499 0 0 0 5.647-9.672.75.75 0 0 0-.654-.719A8.963 8.963 0 0 1 8.5 1.71Zm2.34 5.504a.75.75 0 0 0-1.18-.926L7.394 9.17l-1.156-.99a.75.75 0 1 0-.976 1.138l1.75 1.5a.75.75 0 0 0 1.078-.106l2.75-3.5Z" clipRule="evenodd" />
+  <path fillRule="evenodd" d="M8.5 1.709a.75.75 0 0 0-1 0 8.963 8.963 0 0 1-4.84 2.217.75.75 0 0 0-.654.72 10.499 10.499 0 0 0 5.647 9.672.75.75 0 0 0 .694-.001 10.499 10.499 0 0 0 5.647-9.672.75.75 0 0 0-.654-.719A8.963 8.963 0 0 1 8.5 1.71Zm2.34 5.504a.75.75 0 0 0-1.18-.926L7.394 9.17l-1.156-.99a.75.75 0 1 0-.976 1.138l1.75 1.5a.75.75 0 0 0 1.078-.106l2.75-3.5Z" />
 </svg>,
       
     },
@@ -102,7 +101,7 @@ const benefitTwo = {
 const benefitThree = {
   title: "Key Achievements",
   desc: "",
-  image: benefitTwoImg,
+  image: benefitThreeImg,
   bullets: [
     {
       title: "30%+ Year-on-Year Growth in business proposals and project wins",
@@ -119,11 +118,18 @@ const benefitThree = {
     {
       title: "50%+ Margins achieved in specialized engineering services",
       icon: <svg className="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-  <path fill-rule="evenodd" d="M7.05 4.05A7 7 0 0 1 19 9c0 2.407-1.197 3.874-2.186 5.084l-.04.048C15.77 15.362 15 16.34 15 18a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1c0-1.612-.77-2.613-1.78-3.875l-.045-.056C6.193 12.842 5 11.352 5 9a7 7 0 0 1 2.05-4.95ZM9 21a1 1 0 0 1 1-1h4a1 1 0 1 1 0 2h-4a1 1 0 0 1-1-1Zm1.586-13.414A2 2 0 0 1 12 7a1 1 0 1 0 0-2 4 4 0 0 0-4 4 1 1 0 0 0 2 0 2 2 0 0 1 .586-1.414Z" clip-rule="evenodd"/>
+  <path  d="M7.05 4.05A7 7 0 0 1 19 9c0 2.407-1.197 3.874-2.186 5.084l-.04.048C15.77 15.362 15 16.34 15 18a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1c0-1.612-.77-2.613-1.78-3.875l-.045-.056C6.193 12.842 5 11.352 5 9a7 7 0 0 1 2.05-4.95ZM9 21a1 1 0 0 1 1-1h4a1 1 0 1 1 0 2h-4a1 1 0 0 1-1-1Zm1.586-13.414A2 2 0 0 1 12 7a1 1 0 1 0 0-2 4 4 0 0 0-4 4 1 1 0 0 0 2 0 2 2 0 0 1 .586-1.414Z" clip-rule="evenodd"/>
 </svg>,
     },
     {
-      title: "30%+ Margins delivered in Oil & Gas expansion projects",
+      title: "Oil & Gas",
+      desc: (
+        <>
+          <p>30%+ Margins delivered in Oil & Gas expansion projects</p>
+          <p>Expansion Joints & Dampers: Secured projects with 30%+ profitability</p>
+          <p>Engineering (FEED & DE): Specialized projects with 50%+ returns</p>
+        </>
+      ),
       icon: <svg
     viewBox="0 0 48 48"
     fill="none"
@@ -137,15 +143,15 @@ const benefitThree = {
   </svg>,
     },
     {
-      title: "Piping (Metals & Mining): Delivered projects with 15–20% margins",
+      title: "Metals & Mining",
       desc: 
       (
-  <>
-    <p>Strong performance across Metals & Mining with steady double-digit growth</p>
-    <p>Piping: Delivered projects with 15–20% margins</p>
-    <p>Valves: Achieved 12–14% growth margins</p>
-  </>
-),
+        <>
+          <p>Strong performance across Metals & Mining with steady double-digit growth</p>
+          <p>Piping: Delivered projects with 15 to 20% margins</p>
+          <p>Valves: Achieved 12 to 14% growth margins</p>
+        </>
+      ),
       icon: <svg
       viewBox="0 0 24 24"
       fill="none"
@@ -159,30 +165,6 @@ const benefitThree = {
         d="M3.02172 1.79241C3.11977 1.33042 3.52766 1 3.99994 1H7.49994C10.8167 1 13.9504 2.15662 16.5142 4.05499L16.8139 3.77241C17.2074 3.40139 17.8246 3.41046 18.207 3.79289L20.207 5.79289C20.5895 6.17532 20.5986 6.79251 20.2275 7.18601L19.945 7.48571C21.8433 10.0496 22.9999 13.1833 22.9999 16.5V20C22.9999 20.4723 22.6695 20.8802 22.2075 20.9782C21.7455 21.0763 21.2779 20.8377 21.0861 20.4061C19.5548 16.9607 17.8884 14.1436 15.9191 11.7594L5.78873 22.5551C4.82264 23.5847 3.19624 23.6105 2.19791 22.6122L1.38775 21.802C0.389428 20.8037 0.415275 19.1773 1.44482 18.2112L12.2405 8.08084C9.85633 6.11151 7.03927 4.44513 3.5938 2.91381C3.16223 2.722 2.92368 2.2544 3.02172 1.79241ZM13.7415 9.41504L2.81338 19.6696C2.60747 19.8629 2.6023 20.1881 2.80197 20.3878L3.61213 21.198C3.81179 21.3976 4.13707 21.3925 4.33029 21.1866L14.5849 10.2585C14.3099 9.97106 14.0289 9.69005 13.7415 9.41504ZM8.31869 3.02736C10.6049 4.30007 12.6125 5.70113 14.4033 7.30303C15.2115 8.026 15.9739 8.78848 16.6969 9.59669C18.2988 11.3875 19.6999 13.3951 20.9726 15.6813C20.7848 12.8712 19.6408 10.2169 17.8574 8.06282C17.2794 7.36462 16.6353 6.72057 15.9371 6.14252C13.783 4.35913 11.1287 3.21514 8.31869 3.02736Z"
       />
     </svg>,
-    },
-    {
-      title: "Valves (Metals & Mining): Achieved 12–14% growth margins",
-      icon: <svg className="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-  <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 4v15a1 1 0 0 0 1 1h15M8 16l2.5-5.5 3 3L17.273 7 20 9.667"/>
-</svg>,
-    },
-    {
-      title: "Expansion Joints & Dampers (Oil & Gas): Secured projects with 30%+ profitability",
-      icon: <svg
-    viewBox="0 0 48 48"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    className="w-6 h-6 text-gray-800"
-  >
-    <path
-      fill="currentColor"
-      d="M9 5h30v10H9zM39 29V19H9v10zM9 33h30v10H9zM39 33v8H14a3 3 0 0 1-3-3v-5zM39 19v8H14a3 3 0 0 1-3-3v-5zM39 5v8H14a3 3 0 0 1-3-3V5zM39 5H9a2 2 0 0 1 0-4h30a2 2 0 0 1 0 4zM41 45a2 2 0 0 1-2 2H9a2 2 0 0 1 0-4h30a2 2 0 0 1 2 2zM41 45H11a2 2 0 0 1-2-2h30a2 2 0 0 1 2 2zM7.59 29.59A2 2 0 0 0 9 33h30a2 2 0 0 0 0-4c-32.76 0-30.6-.24-31.41.59zM40.41 18.41A2 2 0 0 0 39 15H9a2 2 0 0 0 0 4c32.76 0 30.6.24 31.41-.59zM41 31H11a2 2 0 0 1-2-2h30a2 2 0 0 1 2 2zM41 17H11a2 2 0 0 1-2-2h30a2 2 0 0 1 2 2zM41 3H11a2 2 0 0 1-2-2h30a2 2 0 0 1 2 2zM33 24a9 9 0 1 1-14.28-7.28A9 9 0 0 1 33 24zM33 24a8.94 8.94 0 0 1-1.72 5.28 9 9 0 0 1-12.56-12.56A9 9 0 0 1 33 24zM27 26a3 3 0 0 1-6 0c0-1.45 2.29-5.72 3-7 0 0 3 5.34 3 7zM27 26.24A3 3 0 0 1 22 24c0-1.17 1.31-3.75 2-5 2.57 4.58 3.12 6.69 3 7.24z"
-    />
-  </svg>,
-    },
-    {
-      title: "Engineering (FEED & DE, Oil & Gas): Specialized projects with 50%+ returns",
-      icon: <EnvelopeIcon/>,
     },
   ],
 };

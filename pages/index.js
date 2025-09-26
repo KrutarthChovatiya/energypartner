@@ -40,7 +40,7 @@ export default function Home() {
           rel="icon"
           href={
             process.env.NODE_ENV === "production" && !process.env.VERCEL
-              ? "/energypartner/favicon.ico"  // GitHub Pages
+              ? "/favicon.ico"  // GitHub Pages
               : "/favicon.ico"                 // local dev or Vercel
           }
         />

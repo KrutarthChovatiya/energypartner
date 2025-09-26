@@ -3,7 +3,7 @@ import Hero from "../components/hero";
 import Navbar from "../components/navbar";
 import SectionTitle from "../components/sectionTitle";
 
-import { benefitOne, benefitTwo } from "../components/data";
+import { benefitOne, benefitTwo, benefitThree } from "../components/data";
 import Video from "../components/video";
 import Benefits from "../components/benefits";
 import Footer from "../components/footer";
@@ -12,6 +12,7 @@ import Cta from "../components/cta";
 import Faq from "../components/faq";
 import PopupWidget from "../components/popupWidget";
 import AutoScrollCarousel from "../components/AutoScrollCarousel";
+import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/solid";
 
 //import dynamic from "next/dynamic";
 
@@ -85,7 +86,7 @@ export default function Home() {
       </div>
     </AutoScrollCarousel>
 
-      <div class="flex justify-center">
+      <div class="flex justify-center" id="ProductandSolution">
         <div className="max-w-2xl mt-10 text-3xl font-bold leading-snug tracking-tight text-indigo-800 lg:leading-tight lg:text-5xl dark:text-white">
           Products & Solutions
         </div>
@@ -123,24 +124,60 @@ export default function Home() {
         </div>
       </AutoScrollCarousel>
 
-      <Benefits data={benefitOne} />
-      <Benefits imgPos="right" data={benefitTwo} />
-      <Video />
+      <div id="BusinessModel">
+        <Benefits data={benefitOne} />
+      </div>
+      <div id="CoreValues">
+        <Benefits imgPos="right" data={benefitTwo} />
+      </div>
+      <div id="KeyAchievements">
+        <Benefits data={benefitThree} />
+      </div>
+      {/* <Video /> */}
       <SectionTitle
         pretitle="Testimonials"
         title="Here's what our customers said">
-        Testimonails is a great way to increase the brand trust and awareness.
-        Use this section to highlight your popular customers.
       </SectionTitle>
       <Testimonials />
       <SectionTitle pretitle="FAQ" title="Frequently Asked Questions">
-        Answer your customers possible questions here, it will increase the
-        conversion rate as well as support or chat requests.
       </SectionTitle>
       <Faq />
-      <SectionTitle title="About Us">
-                At <b>ENERGY PARTNER</b>, we are more than just a supplier — we are your trusted partner in delivering <b>engineering products and end-to-end solutions</b>. With <b>over a decade of expertise</b>, our team of seasoned technocrats provides high-quality, reliable, and tailored solutions across diverse industries. Our mission is to create a <b>single-window experience</b> for customers, simplifying complexities and ensuring smooth project execution.
-      </SectionTitle>
+      <div id="AboutUs">
+        <SectionTitle title="About Us">
+          At <b>ENERGY PARTNER</b>, we are more than just a supplier — we are your trusted partner in delivering <b>engineering products and end-to-end solutions</b>. With <b>over a decade of expertise</b>, our team of seasoned technocrats provides high-quality, reliable, and tailored solutions across diverse industries. Our mission is to create a <b>single-window experience</b> for customers, simplifying complexities and ensuring smooth project execution.
+        </SectionTitle>
+      </div>
+      <div id="ContactUs" className="py-16 bg-gray-50 dark:bg-gray-900">
+      <SectionTitle title="Contact Us">
+        <p className="text-base text-gray-600 dark:text-gray-400">
+          We'd love to hear from you. Reach out to us anytime!
+        </p>
+
+        <div className="mt-8 flex flex-col gap-6 sm:flex-row sm:justify-center">
+          {/* Email Button */}
+            <a
+              href="mailto:energypartner1@outlook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 px-6 py-4 text-lg font-medium text-white bg-indigo-600 hover:bg-indigo-700 rounded-md transition"
+            >
+              <EnvelopeIcon className="w-6 h-6" />
+              Email Us
+            </a>
+
+            {/* Phone Button */}
+            <a
+              href="tel:+918160547881"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 px-6 py-4 text-lg font-medium text-white bg-indigo-600 hover:bg-indigo-700 rounded-md transition"
+            >
+              <PhoneIcon className="w-6 h-6" />
+              Call Now
+            </a>
+          </div>
+        </SectionTitle>
+      </div>
       {/* <div class="flex justify-center">
         <div className="max-w-2xl mt-1 text-3xl font-bold leading-snug tracking-tight text-indigo-800 lg:leading-tight lg:text-4xl dark:text-white">
           About Us

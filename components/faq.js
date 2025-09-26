@@ -1,7 +1,7 @@
 import React from "react";
 import Container from "./container";
 import { Disclosure } from "@headlessui/react";
-import { ChevronUpIcon } from "@heroicons/react/solid";
+import { ChevronUpIcon } from "@heroicons/react/24/solid";
 
 export default function Faq() {
   return (
@@ -35,21 +35,35 @@ export default function Faq() {
 
 const faqdata = [
   {
-    question: "Is this template completely free to use?",
-    answer: "Yes, this template is completely free to use.",
+    question: "What services does ENERGY PARTNER provide?",
+    answer: "We provide high-quality engineering products, packages, and end-to-end solutions across industries like Oil & Gas, Metals & Mining, FMCG, and Infrastructure.",
   },
   {
-    question: "Can I use it in a commercial project?",
-    answer: "Yes, this you can.",
+    question: "Do you supply both products and services?",
+    answer: "Yes. We specialize in products like piping, valves, expansion joints, and also offer packages like HVAC, cranes, and engineering services.",
   },
   {
-    question: "What is your refund policy? ",
-    answer:
-      "If you're unhappy with your purchase for any reason, email us within 90 days and we'll refund you in full, no questions asked.",
+    question: "How does your blockchain-enabled business model work?",
+    answer: "Our model ensures secure negotiations, compliance, data privacy, and tamper-proof transactions, acting as a reliable bridge between suppliers and customers.",
   },
   {
-    question: "Do you offer technical support? ",
-    answer:
-      "No, we don't offer technical support for free downloads. Please purchase a support plan to get 6 months of support.",
+    question: "How experienced is your team?",
+    answer: "Our team consists of technocrats with over a decade of experience and domain expertise in engineering solutions.",
+  },
+  {
+    question: "What makes ENERGY PARTNER different from competitors?",
+    answer: "We focus on transparency, value addition, and building long-term relationships through trust and technical expertise.",
+  },
+  {
+    question: "How can I start working with ENERGY PARTNER?",
+    answer: "You can reach us via phone or email. Our team will discuss your requirements and provide a proposal tailored to your needs.",
+  },
+  {
+    question: "Do you work with international clients and suppliers?",
+    answer: "Yes, we collaborate with global suppliers and customers while ensuring compliance with international standards.",
+  },
+  {
+    question: "How do you ensure confidentiality in deals?",
+    answer: "Through blockchain-enabled negotiations, we guarantee secure, private, and tamper-proof transactions.",
   },
 ];

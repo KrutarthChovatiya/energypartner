@@ -4,7 +4,7 @@ import { Disclosure } from "@headlessui/react";
 import Image from "next/image";
 
 export default function Navbar() {
-  const navigation = ["Product & Solution", "Business Model", "Key Achievements", "About Us", "Contact Us"];
+  const navigation = ["Product and Solution", "Business Model", "Key Achievements", "About Us", "Contact Us"];
 
   return (
     <div className="w-full">
@@ -14,7 +14,7 @@ export default function Navbar() {
           {({ open }) => (
             <>
               <div className="flex flex-wrap items-center justify-between w-full lg:w-auto">
-                <Link href="#!">
+                <Link href="#">
                   <a className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-gray-100">
                     <span>
                       <Image
@@ -56,7 +56,7 @@ export default function Navbar() {
                 <Disclosure.Panel className="flex flex-wrap w-full my-5 lg:hidden">
                   <>
                     {navigation.map((item, index) => (
-                      <Link key={index} href="#!">
+                      <Link key={index} href={`#${item.replaceAll(" ","")}`}>
                         <a className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-trueGray-700">
                           {item}
                         </a>
@@ -77,7 +77,7 @@ export default function Navbar() {
           <ul className="items-center justify-end flex-1 pt-6 list-none lg:pt-0 lg:flex">
             {navigation.map((menu, index) => (
               <li className="mr-3 nav__item" key={index}>
-                <Link href="#!">
+                <Link href={`#${menu.replaceAll(" ","")}`}>
                   <a className="inline-block px-4 py-2 text-lg font-normal rounded-md no-underline text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-trueGray-700">
                     {menu}
                   </a>

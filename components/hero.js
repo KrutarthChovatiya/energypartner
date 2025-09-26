@@ -4,6 +4,7 @@ import Container from "./container";
 
 const heroImg = "/images/hero.png";
 const mailImg = "/images/icons/mail.svg";
+import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/solid";
 
 export default function Hero() {
   return (
@@ -18,19 +19,27 @@ export default function Hero() {
               Delivering world-class engineering products, packages, and services with trust, transparency, and expertise.
             </p>
 
+
             <div className="flex flex-col items-start gap-3 sm:space-y-0 sm:items-center sm:flex-row">
+              {/* Email Button */}
               <a
                 href="mailto:energypartner1@outlook.com"
                 target="_blank"
-                rel="noopener"
-                className="px-8 py-4 text-lg font-medium text-center text-white bg-indigo-600 rounded-md ">
-                  Email US
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 px-6 py-4 text-lg font-medium text-white bg-indigo-600 hover:bg-indigo-700 rounded-md transition"
+              >
+                <EnvelopeIcon className="w-6 h-6" />
+                Email Us
               </a>
+
+              {/* Phone Button */}
               <a
                 href="tel:+918160547881"
                 target="_blank"
-                rel="noopener"
-                className="px-8 py-4 text-lg font-medium text-center text-white bg-indigo-600 rounded-md ">
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 px-6 py-4 text-lg font-medium text-white bg-indigo-600 hover:bg-indigo-700 rounded-md transition"
+              >
+                <PhoneIcon className="w-6 h-6" />
                 Call Now
               </a>
             </div>

@@ -4,7 +4,7 @@ import Container from "./container";
 import Image from "next/image";
 
 export default function Footer() {
-  const navigation = ["Product & Solution", "Business Model", "Key Achievements", "About Us", "Contact Us"];
+  const navigation = ["Product and Solution", "Business Model", "Key Achievements", "About Us", "Contact Us"];
   const legal = ["Terms", "Privacy", "Legal"];
   return (
     <div className="relative">
@@ -13,7 +13,7 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <div>
               {"    "}
-              <Link href="#!">
+              <Link href="#">
                 <a className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-gray-100">
                   <span>
                     <Image
@@ -31,16 +31,14 @@ export default function Footer() {
             </div>
 
             <div className="max-w-md mt-4 text-gray-500 dark:text-gray-400">
-              Nextly is a free landing page & marketing website template for
-              startups and indie projects. Its built with Next.js & TailwindCSS.
-              And its completely open-source.
+              Energy Partner is a trusted provider of engineering products and end-to-end solutions, serving industries like Oil & Gas, Metals & Mining, FMCG, and Infrastructure with transparency, expertise, and value-driven services.
             </div>
           </div>
 
           <div>
             <div className="flex flex-wrap w-full -mt-2 -ml-3 lg:ml-0">
               {navigation.map((item, index) => (
-                <Link key={index} href="#!">
+                <Link key={index} href={`#${item.replaceAll(" ","")}`}>
                   <a className="w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-trueGray-700">
                     {item}
                   </a>
@@ -51,7 +49,7 @@ export default function Footer() {
           <div>
             <div className="flex flex-wrap w-full -mt-2 -ml-3 lg:ml-0">
               {legal.map((item, index) => (
-                <Link key={index} href="#!">
+                <Link key={index} href={`#${item.replaceAll(" ","")}`}>
                   <a className="w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-trueGray-700">
                     {item}
                   </a>

@@ -31,10 +31,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Nextly - Free Nextjs & TailwindCSS Landing Page Template</title>
+        <title>Energy Partner – Engineering Products & End-to-End Solutions</title>
         <meta
           name="description"
-          content="Nextly is a free landing page template built with next.js & Tailwind CSS"
+          content="Energy Partner is your trusted partner for engineering products, packages, and end-to-end solutions. Serving Oil & Gas, Metals & Mining, FMCG, and Infrastructure with transparency, expertise, and innovation."
         />
         <link
           rel="icon"

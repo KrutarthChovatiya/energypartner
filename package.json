@@ -1,7 +1,7 @@
   {
-    "name": "nextly-template",
+    "name": "energy-partner",
     "version": "0.1.0",
-    "description": "Energy Partner Landing Page Template",
+    "description": "Energy Partner",
     "homepage": "https://krutarthchovatiya.github.io/energypartner",
     "private": true,
     "scripts": {

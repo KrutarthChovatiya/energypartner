@@ -163,7 +163,7 @@ const Linkedin = ({ size = 24 }) => (
 const Backlink = () => {
   return (
     <a
-      href="https://web3templates.com"
+      href="#"
       target="_blank"
       rel="noopener"
       className="absolute flex px-3 py-1 space-x-2 text-sm font-semibold text-gray-900 bg-white border border-gray-300 rounded shadow-sm place-items-center left-5 bottom-5 dark:bg-trueGray-900 dark:border-trueGray-700 dark:text-trueGray-300">

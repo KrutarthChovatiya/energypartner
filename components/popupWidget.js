@@ -112,171 +112,171 @@ export default function PopupWidget() {
                     We usually respond in a few hours
                   </p>
                 </div>
-                <div className="flex-grow h-full p-6 overflow-auto bg-gray-50 ">
+                <div className="flex-grow h-full p-6 overflow-auto bg-gray-50 bg-white text-black dark:bg-gray-900 dark:text-white p-6 shadow-lg">
                   {!isSubmitSuccessful && (
-                    <form onSubmit={handleSubmit(onSubmit)} noValidate>
-                      <input
-                        type="hidden"
-                        value=""
-                        {...register("apikey")}
-                      />
-                      <input
-                        type="hidden"
-                        value={`${userName} sent a message from Energy Partner website`}
-                        {...register("subject")}
-                      />
-                      <input
-                        type="hidden"
-                        value="Query from Energy Partner website"
-                        {...register("from_name")}
-                      />
-                      <input
-                        type="checkbox"
-                        className="hidden"
-                        style={{ display: "none" }}
-                        {...register("botcheck")}></input>
-
-                      <div className="mb-4">
-                        <label
-                          htmlFor="full_name"
-                          className="block mb-2 text-sm text-gray-600 dark:text-gray-400">
-                          Full Name
-                        </label>
+                    <form onSubmit={handleSubmit(onSubmit)} noValidate >
                         <input
-                          type="text"
-                          id="full_name"
-                          placeholder="John Doe"
-                          {...register("name", {
-                            required: "Full name is required",
-                            maxLength: 80,
-                          })}
-                          className={`w-full px-3 py-2 placeholder-gray-300 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring   ${
-                            errors.name
-                              ? "border-red-600 focus:border-red-600 ring-red-100"
-                              : "border-gray-300 focus:border-indigo-600 ring-indigo-100"
-                          }`}
+                          type="hidden"
+                          value=""
+                          {...register("apikey")}
                         />
-                        {errors.name && (
-                          <div className="mt-1 text-sm text-red-400 invalid-feedback">
-                            {errors.name.message}
-                          </div>
-                        )}
-                      </div>
-
-                      <div className="mb-4">
-                        <label
-                          htmlFor="email"
-                          className="block mb-2 text-sm text-gray-600 dark:text-gray-400">
-                          Email Address
-                        </label>
                         <input
-                          type="email"
-                          id="email"
-                          {...register("email", {
-                            required: "Enter your email",
-                            pattern: {
-                              value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-                              message: "Please enter a valid email",
-                            },
-                          })}
-                          placeholder="you@company.com"
-                          className={`w-full px-3 py-2 placeholder-gray-300 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring   ${
-                            errors.email
-                              ? "border-red-600 focus:border-red-600 ring-red-100"
-                              : "border-gray-300 focus:border-indigo-600 ring-indigo-100"
-                          }`}
+                          type="hidden"
+                          value={`${userName} sent a message from Energy Partner website`}
+                          {...register("subject")}
                         />
-
-                        {errors.email && (
-                          <div className="mt-1 text-sm text-red-400 invalid-feedback">
-                            {errors.email.message}
-                          </div>
-                        )}
-                      </div>
-
-                      <div className="mb-4">
-                        <label
-                          htmlFor="phone"
-                          className="block mb-2 text-sm text-gray-600 dark:text-gray-400">
-                          Phone
-                        </label>
                         <input
-                          type="tel"
-                          id="phone"
-                          {...register("phone", {
-                            pattern: {
-                              value: /^[+\d]?(?:[\d-.\s()]*)$/,
-                              message: "Please enter a valid phone number",
-                            },
-                          })}
-                          placeholder="+1 (123) 456-7890"
-                          className={`w-full px-3 py-2 placeholder-gray-300 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring   ${
-                            errors.phone
-                              ? "border-red-600 focus:border-red-600 ring-red-100"
-                              : "border-gray-300 focus:border-indigo-600 ring-indigo-100"
-                          }`}
+                          type="hidden"
+                          value="Query from Energy Partner website"
+                          {...register("from_name")}
                         />
+                        <input
+                          type="checkbox"
+                          className="hidden"
+                          style={{ display: "none" }}
+                          {...register("botcheck")}></input>
 
-                        {errors.phone && (
-                          <div className="mt-1 text-sm text-red-400 invalid-feedback">
-                            {errors.phone.message}
-                          </div>
-                        )}
-                      </div>
-
-                      <div className="mb-4">
-                        <label
-                          htmlFor="message"
-                          className="block mb-2 text-sm text-gray-600 dark:text-gray-400">
-                          Your Message
-                        </label>
-
-                        <textarea
-                          rows="4"
-                          id="message"
-                          {...register("message", {
-                            required: "Enter your Message",
-                          })}
-                          placeholder="Your Message"
-                          className={`w-full px-3 py-2 placeholder-gray-300 bg-white border border-gray-300 rounded-md h-28 focus:outline-none focus:ring   ${
-                            errors.message
-                              ? "border-red-600 focus:border-red-600 ring-red-100"
-                              : "border-gray-300 focus:border-indigo-600 ring-indigo-100"
-                          }`}
-                          required></textarea>
-                        {errors.message && (
-                          <div className="mt-1 text-sm text-red-400 invalid-feedback">
-                            {errors.message.message}
-                          </div>
-                        )}
-                      </div>
-                      <div className="mb-3">
-                        <button
-                          type="submit"
-                          className="w-full px-3 py-4 text-white bg-indigo-500 rounded-md focus:bg-indigo-600 focus:outline-none">
-                          {isSubmitting ? (
-                            <svg
-                              className="w-5 h-5 mx-auto text-white animate-spin"
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 24 24">
-                              <circle
-                                className="opacity-25"
-                                cx="12"
-                                cy="12"
-                                r="10"
-                                stroke="currentColor"
-                                strokeWidth="4"></circle>
-                              <path
-                                className="opacity-75"
-                                fill="currentColor"
-                                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                            </svg>
-                          ) : (
-                            "Send Message"
+                        <div className="mb-4">
+                          <label
+                            htmlFor="full_name"
+                            className="block mb-2 text-sm text-gray-600 dark:text-gray-400">
+                            Full Name
+                          </label>
+                          <input
+                            type="text"
+                            id="full_name"
+                            placeholder="John Doe"
+                            {...register("name", {
+                              required: "Full name is required",
+                              maxLength: 80,
+                            })}
+                            className={`w-full px-3 py-2 placeholder-gray-300 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring   ${
+                              errors.name
+                                ? "border-red-600 focus:border-red-600 ring-red-100"
+                                : "border-gray-300 focus:border-indigo-600 ring-indigo-100"
+                            }`}
+                          />
+                          {errors.name && (
+                            <div className="mt-1 text-sm text-red-400 invalid-feedback">
+                              {errors.name.message}
+                            </div>
                           )}
-                        </button>
-                      </div>
+                        </div>
+
+                        <div className="mb-4">
+                          <label
+                            htmlFor="email"
+                            className="block mb-2 text-sm text-gray-600 dark:text-gray-400">
+                            Email Address
+                          </label>
+                          <input
+                            type="email"
+                            id="email"
+                            {...register("email", {
+                              required: "Enter your email",
+                              pattern: {
+                                value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                                message: "Please enter a valid email",
+                              },
+                            })}
+                            placeholder="you@company.com"
+                            className={`w-full px-3 py-2 placeholder-gray-300 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring   ${
+                              errors.email
+                                ? "border-red-600 focus:border-red-600 ring-red-100"
+                                : "border-gray-300 focus:border-indigo-600 ring-indigo-100"
+                            }`}
+                          />
+
+                          {errors.email && (
+                            <div className="mt-1 text-sm text-red-400 invalid-feedback">
+                              {errors.email.message}
+                            </div>
+                          )}
+                        </div>
+
+                        <div className="mb-4">
+                          <label
+                            htmlFor="phone"
+                            className="block mb-2 text-sm text-gray-600 dark:text-gray-400">
+                            Phone
+                          </label>
+                          <input
+                            type="tel"
+                            id="phone"
+                            {...register("phone", {
+                              pattern: {
+                                value: /^[+\d]?(?:[\d-.\s()]*)$/,
+                                message: "Please enter a valid phone number",
+                              },
+                            })}
+                            placeholder="+1 (123) 456-7890"
+                            className={`w-full px-3 py-2 placeholder-gray-300 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring   ${
+                              errors.phone
+                                ? "border-red-600 focus:border-red-600 ring-red-100"
+                                : "border-gray-300 focus:border-indigo-600 ring-indigo-100"
+                            }`}
+                          />
+
+                          {errors.phone && (
+                            <div className="mt-1 text-sm text-red-400 invalid-feedback">
+                              {errors.phone.message}
+                            </div>
+                          )}
+                        </div>
+
+                        <div className="mb-4">
+                          <label
+                            htmlFor="message"
+                            className="block mb-2 text-sm text-gray-600 dark:text-gray-400">
+                            Your Message
+                          </label>
+
+                          <textarea
+                            rows="4"
+                            id="message"
+                            {...register("message", {
+                              required: "Enter your Message",
+                            })}
+                            placeholder="Your Message"
+                            className={`w-full px-3 py-2 placeholder-gray-300 bg-white border border-gray-300 rounded-md h-28 focus:outline-none focus:ring   ${
+                              errors.message
+                                ? "border-red-600 focus:border-red-600 ring-red-100"
+                                : "border-gray-300 focus:border-indigo-600 ring-indigo-100"
+                            }`}
+                            required></textarea>
+                          {errors.message && (
+                            <div className="mt-1 text-sm text-red-400 invalid-feedback">
+                              {errors.message.message}
+                            </div>
+                          )}
+                        </div>
+                        <div className="mb-3">
+                          <button
+                            type="submit"
+                            className="w-full px-3 py-4 text-white bg-indigo-500 rounded-md focus:bg-indigo-600 focus:outline-none">
+                            {isSubmitting ? (
+                              <svg
+                                className="w-5 h-5 mx-auto text-white animate-spin"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24">
+                                <circle
+                                  className="opacity-25"
+                                  cx="12"
+                                  cy="12"
+                                  r="10"
+                                  stroke="currentColor"
+                                  strokeWidth="4"></circle>
+                                <path
+                                  className="opacity-75"
+                                  fill="currentColor"
+                                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                              </svg>
+                            ) : (
+                              "Send Message"
+                            )}
+                          </button>
+                        </div>
                     </form>
                   )}
 

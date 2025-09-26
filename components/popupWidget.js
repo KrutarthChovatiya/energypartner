@@ -11,9 +11,6 @@ export default function PopupWidget() {
     formState: { errors, isSubmitSuccessful, isSubmitting },
   } = useForm({
     mode: "onTouched",
-    defaultValues: {
-      name: "Someone",  // <-- set default value here
-    },
   });
   const [isSuccess, setIsSuccess] = useState(false);
   const [Message, setMessage] = useState("");

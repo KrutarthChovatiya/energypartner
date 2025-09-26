@@ -6,7 +6,7 @@
     "private": true,
     "scripts": {
       "dev": "cross-env NODE_OPTIONS=--openssl-legacy-provider next dev",
-      "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider next build && next export",
+      "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider next build",
       "start": "next start",
       "predeploy": "npm run build",
       "deploy": "npm run build && gh-pages -d out",

@@ -9,7 +9,7 @@
     "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider next build && next export",
     "start": "next start",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d out",
+    "deploy": "npm run build && gh-pages -d out",
     "test": "echo \"No tests specified\" && exit 0"
   },
   "repository": {

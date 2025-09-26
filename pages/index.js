@@ -138,7 +138,10 @@ export default function Home() {
         conversion rate as well as support or chat requests.
       </SectionTitle>
       <Faq />
-      <div class="flex justify-center">
+      <SectionTitle title="About Us">
+                At <b>ENERGY PARTNER</b>, we are more than just a supplier — we are your trusted partner in delivering <b>engineering products and end-to-end solutions</b>. With <b>over a decade of expertise</b>, our team of seasoned technocrats provides high-quality, reliable, and tailored solutions across diverse industries. Our mission is to create a <b>single-window experience</b> for customers, simplifying complexities and ensuring smooth project execution.
+      </SectionTitle>
+      {/* <div class="flex justify-center">
         <div className="max-w-2xl mt-1 text-3xl font-bold leading-snug tracking-tight text-indigo-800 lg:leading-tight lg:text-4xl dark:text-white">
           About Us
         </div>
@@ -147,7 +150,7 @@ export default function Home() {
       <div className="max-w-5xl mt-1 text-3xl font-bold leading-normal text-gray-700 lg:text-xl xl:text-xl dark:text-gray-300 dark:text-white">
         At <b>ENERGY PARTNER</b>, we are more than just a supplier — we are your trusted partner in delivering <b>engineering products and end-to-end solutions</b>. With <b>over a decade of expertise</b>, our team of seasoned technocrats provides high-quality, reliable, and tailored solutions across diverse industries. Our mission is to create a <b>single-window experience</b> for customers, simplifying complexities and ensuring smooth project execution.
         </div>
-      </div>
+      </div> */}
       {/* <Cta /> */}
       <Footer />
       <PopupWidget />

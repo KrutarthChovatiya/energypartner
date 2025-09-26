@@ -2,10 +2,18 @@ import Link from "next/link";
 import React from "react";
 import Container from "./container";
 import Image from "next/image";
+import { useTheme } from "next-themes";
 
 export default function Footer() {
   const navigation = ["Product and Solution", "Business Model", "Key Achievements", "About Us", "Contact Us"];
   const legal = ["Terms", "Privacy", "Legal"];
+
+  const { theme, resolvedTheme } = useTheme();
+  const currentTheme = theme === 'system' ? resolvedTheme : theme;
+  const logoImageSrc = currentTheme === 'dark'
+      ? '/images/logo_dark.png'
+      : '/images/logo_light.png';
+
   return (
     <div className="relative">
       <Container>
@@ -16,16 +24,26 @@ export default function Footer() {
               <Link href="#">
                 <a className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-gray-100">
                   <span>
-                    <Image
+                    {/* <Image
                       src="/images/logo.svg"
                       alt="N"
                       width="32"
                       height="32"
                       className="w-8"
                       loader={({ src }) => src}
-                    />
+                    /> */}
+                    <div style={{ width: "20vw" }}>
+                      <Image
+                        src={logoImageSrc}
+                        alt="Description"
+                        layout="responsive"
+                        width={460}
+                        height={134}
+                        loader={({ src }) => src}
+                      />
+                    </div>
                   </span>
-                  <span>Energy Partner</span>
+                  {/* <span>Energy Partner</span> */}
                 </a>
               </Link>
             </div>
@@ -88,17 +106,9 @@ export default function Footer() {
         </div>
 
         <div className="my-10 text-sm text-center text-gray-600 dark:text-gray-400">
-          Copyright © {new Date().getFullYear()}. Made with ♥ by{" "}
-          <a href="https://web3templates.com/" target="_blank" rel="noopener">
-            Web3Templates.
-          </a>{" "}
-          Illustrations from{" "}
-          <a href="https://www.glazestock.com/" target="_blank" rel="noopener ">
-            Glazestock {" ~ "}
-          </a>
-          Distributed by{" "}
-          <a href="https://www.themewagon.com/" target="_blank" rel="noopener ">
-            ThemeWagon
+          Copyright © {new Date().getFullYear()}.
+          <a href="#" rel="noopener">
+            {" "}EnergygyPartner
           </a>
         </div>
       </Container>

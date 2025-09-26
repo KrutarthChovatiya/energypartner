@@ -2,9 +2,17 @@ import Link from "next/link";
 import ThemeChanger from "./DarkSwitch";
 import { Disclosure } from "@headlessui/react";
 import Image from "next/image";
+import { useTheme } from "next-themes";
+
 
 export default function Navbar() {
   const navigation = ["Product and Solution", "Business Model", "Key Achievements", "About Us", "Contact Us"];
+
+  const { theme, resolvedTheme } = useTheme();
+  const currentTheme = theme === 'system' ? resolvedTheme : theme;
+  const logoImageSrc = currentTheme === 'dark'
+      ? '/images/logo_dark.png'
+      : '/images/logo_light.png';
 
   return (
     <div className="w-full">
@@ -17,16 +25,26 @@ export default function Navbar() {
                 <Link href="#">
                   <a className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-gray-100">
                     <span>
-                      <Image
+                      {/* <Image
                         src="/images/logo.svg"
                         alt="N"
                         width="32"
                         height="32"
                         className="w-8"
                         loader={({ src }) => src}
-                      />
+                      /> */}
+                      <div style={{ width: "20vw" }}>
+                        <Image
+                          src={logoImageSrc}
+                          alt="Description"
+                          layout="responsive"
+                          width={1080}
+                          height={314}
+                          loader={({ src }) => src}
+                        />
+                      </div>
                     </span>
-                    <span>Energy Partner</span>
+                    {/* <span>Energy Partner</span> */}
                   </a>
                 </Link>
 

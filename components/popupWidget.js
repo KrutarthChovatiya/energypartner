@@ -19,13 +19,22 @@ export default function PopupWidget() {
 
   const onSubmit = async (data, e) => {
     console.log("data", data)
+
+    // Dynamically create subject & from_name
+  const payload = {
+    ...data,
+    subject: `${userName} sent a message from Energy Partner website`,
+    from_name: "Query from Energy Partner website",
+  };
+
+  console.log("data after adding subject", payload)
   try {
     const response = await fetch("/api/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(data),
+      body: JSON.stringify(payload),
     });
 
     const json = await response.json();
@@ -115,21 +124,6 @@ export default function PopupWidget() {
                 <div className="flex-grow h-full p-6 overflow-auto bg-gray-50 bg-white text-black dark:bg-gray-900 dark:text-white p-6 shadow-lg">
                   {!isSubmitSuccessful && (
                     <form onSubmit={handleSubmit(onSubmit)} noValidate >
-                        <input
-                          type="hidden"
-                          value=""
-                          {...register("apikey")}
-                        />
-                        <input
-                          type="hidden"
-                          value={`${userName || "Someone"} sent a message from Energy Partner website`}
-                          {...register("subject")}
-                        />
-                        <input
-                          type="hidden"
-                          value="Query from Energy Partner website"
-                          {...register("from_name")}
-                        />
                         <input
                           type="checkbox"
                           className="hidden"

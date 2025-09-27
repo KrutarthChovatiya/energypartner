@@ -6,7 +6,7 @@ import { useTheme } from "next-themes";
 
 
 export default function Navbar() {
-  const navigation = ["Product and Solution", "Business Model", "Key Achievements", "About Us", "Contact Us"];
+  const navigation = ["Product and Solution", "What We Do", "Key Achievements", "About Us", "Contact Us"];
 
   const { theme, resolvedTheme } = useTheme();
   const currentTheme = theme === 'system' ? resolvedTheme : theme;

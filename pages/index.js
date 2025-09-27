@@ -30,7 +30,7 @@ import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/solid";
 
 export default function Home() {
   const email = process.env.EP_MAIN;
-const phone = process.env.EP_PHONE;
+  const phone = process.env.EP_PHONE;
   return (
     <>
       <Head>
@@ -58,36 +58,36 @@ const phone = process.env.EP_PHONE;
       </div>
       <AutoScrollCarousel scrollSpeed={1} className="my-custom-class">
         <div className="mx-[5%]">
-      <SectionTitle className="break-words"  title="Buildings & Factories">
-        FMCG projects and industrial facilities
-      </SectionTitle>
+          <SectionTitle className="break-words" title="Buildings & Factories">
+            FMCG projects and industrial facilities
+          </SectionTitle>
         </div>
         <div className="mx-[5%]">
-      <SectionTitle className="break-words"  title="Oil & Gas">
-        FPSO, LNG, Offshore Jackets, Petrochemicals, Refinery
-      </SectionTitle>
-      </div>
-      <div className="mx-[5%]">
-      <SectionTitle className="break-words"  title="Metals & Mining">
-        Smelters & Steel Plants
-      </SectionTitle>
-      </div>
-      <div className="mx-[5%]">
-      <SectionTitle className="break-words"  title="Buildings & Factories">
-        FMCG projects and industrial facilities
-      </SectionTitle>
-      </div>
-      <div className="mx-[5%]">
-      <SectionTitle className="break-words"  title="Oil & Gas">
-        FPSO, LNG, Offshore Jackets, Petrochemicals, Refinery
-      </SectionTitle>
-      </div>
-      <div className="mx-[5%]">
-      <SectionTitle className="break-words"  title="Metals & Mining" >
-        Smelters & Steel Plants
-      </SectionTitle>
-      </div>
-    </AutoScrollCarousel>
+          <SectionTitle className="break-words" title="Oil & Gas">
+            FPSO, LNG, Offshore Jackets, Petrochemicals, Refinery
+          </SectionTitle>
+        </div>
+        <div className="mx-[5%]">
+          <SectionTitle className="break-words" title="Metals & Mining">
+            Smelters & Steel Plants
+          </SectionTitle>
+        </div>
+        <div className="mx-[5%]">
+          <SectionTitle className="break-words" title="Buildings & Factories">
+            FMCG projects and industrial facilities
+          </SectionTitle>
+        </div>
+        <div className="mx-[5%]">
+          <SectionTitle className="break-words" title="Oil & Gas">
+            FPSO, LNG, Offshore Jackets, Petrochemicals, Refinery
+          </SectionTitle>
+        </div>
+        <div className="mx-[5%]">
+          <SectionTitle className="break-words" title="Metals & Mining" >
+            Smelters & Steel Plants
+          </SectionTitle>
+        </div>
+      </AutoScrollCarousel>
 
       <div className="flex justify-center" id="ProductandSolution">
         <div className="max-w-2xl mt-10 text-3xl font-bold leading-snug tracking-tight text-indigo-800 lg:leading-tight lg:text-5xl dark:text-white">
@@ -96,38 +96,38 @@ const phone = process.env.EP_PHONE;
       </div>
       <AutoScrollCarousel scrollSpeed={1} className="my-custom-class">
         <div className="mx-[5%]">
-        <SectionTitle className="break-words" title="Piping & Valves">
-          Ball, GGC, Butterfly, Check, Cryo, MOV, ROV, DPCV, Piping Spool Fabrication.
-        </SectionTitle>
+          <SectionTitle className="break-words" title="Piping & Valves">
+            Ball, GGC, Butterfly, Check, Cryo, MOV, ROV, DPCV, Piping Spool Fabrication.
+          </SectionTitle>
         </div>
         <div className="mx-[5%]">
-        <SectionTitle className="break-words"  title="Packages">
-          HVAC, Cranes, Skids, E-Houses, Power Distribution Centers
-        </SectionTitle>
+          <SectionTitle className="break-words" title="Packages">
+            HVAC, Cranes, Skids, E-Houses, Power Distribution Centers
+          </SectionTitle>
         </div>
         <div className="mx-[5%]">
-        <SectionTitle className="break-words"  title="Specialty Products">
-          Steam Drums, Heat Exchangers, Expansion Joints, Dampers, Flame Arrestors, Ducting
-        </SectionTitle>
+          <SectionTitle className="break-words" title="Specialty Products">
+            Steam Drums, Heat Exchangers, Expansion Joints, Dampers, Flame Arrestors, Ducting
+          </SectionTitle>
         </div>
         <div className="mx-[5%]">
-        <SectionTitle className="break-words"  title="Piping & Valves">
-          Ball, GGC, Butterfly, Check, Cryo, MOV, ROV, DPCV, Piping Spool Fabrication.
-        </SectionTitle>
+          <SectionTitle className="break-words" title="Piping & Valves">
+            Ball, GGC, Butterfly, Check, Cryo, MOV, ROV, DPCV, Piping Spool Fabrication.
+          </SectionTitle>
         </div>
         <div className="mx-[5%]">
-        <SectionTitle className="break-words"  title="Packages">
-          HVAC, Cranes, Skids, E-Houses, Power Distribution Centers
-        </SectionTitle>
+          <SectionTitle className="break-words" title="Packages">
+            HVAC, Cranes, Skids, E-Houses, Power Distribution Centers
+          </SectionTitle>
         </div>
         <div className="mx-[5%]">
-        <SectionTitle className="break-words"  title="Specialty Products">
-          Steam Drums, Heat Exchangers, Expansion Joints, Dampers, Flame Arrestors, Ducting
-        </SectionTitle>
+          <SectionTitle className="break-words" title="Specialty Products">
+            Steam Drums, Heat Exchangers, Expansion Joints, Dampers, Flame Arrestors, Ducting
+          </SectionTitle>
         </div>
       </AutoScrollCarousel>
 
-      <div id="BusinessModel">
+      <div id="WhatWeDo">
         <Benefits data={benefitOne} />
       </div>
       <div id="CoreValues">
@@ -151,13 +151,13 @@ const phone = process.env.EP_PHONE;
         </SectionTitle>
       </div>
       <div id="ContactUs" className="py-16 bg-gray-50 dark:bg-gray-900">
-      <SectionTitle title="Contact Us">
-        <p className="text-base text-gray-600 dark:text-gray-400">
-          We'd love to hear from you. Reach out to us anytime!
-        </p>
+        <SectionTitle title="Contact Us">
+          <p className="text-base text-gray-600 dark:text-gray-400">
+            We'd love to hear from you. Reach out to us anytime!
+          </p>
 
-        <div className="mt-8 flex flex-col gap-6 sm:flex-row sm:justify-center">
-          {/* Email Button */}
+          <div className="mt-8 flex flex-col gap-6 sm:flex-row sm:justify-center">
+            {/* Email Button */}
             <a
               href={`mailto:${email}`}
               target="_blank"

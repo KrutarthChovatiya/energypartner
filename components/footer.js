@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useTheme } from "next-themes";
 
 export default function Footer() {
-  const navigation = ["Product and Solution", "Business Model", "Key Achievements", "About Us", "Contact Us"];
+  const navigation = ["Product and Solution", "What We Do", "Key Achievements", "About Us", "Contact Us"];
   const legal = ["Terms", "Privacy", "Legal"];
 
   const { theme, resolvedTheme } = useTheme();
@@ -32,7 +32,7 @@ export default function Footer() {
                       className="w-8"
                       loader={({ src }) => src}
                     /> */}
-                    <div style={{ width: "15vw" }}>
+                    <div style={{ width: "18vw" }}>
                       <Image
                         src={logoImageSrc}
                         alt="Description"

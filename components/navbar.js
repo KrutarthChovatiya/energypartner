@@ -11,8 +11,8 @@ export default function Navbar() {
   const { theme, resolvedTheme } = useTheme();
   const currentTheme = theme === 'system' ? resolvedTheme : theme;
   const logoImageSrc = currentTheme === 'dark'
-      ? '/images/logo_dark.png'
-      : '/images/logo_light.png';
+      ? '/images/logo_tagline_dark.png'
+      : '/images/logo_tagline_light.png';
 
   return (
     <div className="w-full">
@@ -39,7 +39,7 @@ export default function Navbar() {
                           alt="Description"
                           layout="responsive"
                           width={1080}
-                          height={314}
+                          height={593}
                           loader={({ src }) => src}
                         />
                       </div>

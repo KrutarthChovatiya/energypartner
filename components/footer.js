@@ -11,8 +11,8 @@ export default function Footer() {
   const { theme, resolvedTheme } = useTheme();
   const currentTheme = theme === 'system' ? resolvedTheme : theme;
   const logoImageSrc = currentTheme === 'dark'
-      ? '/images/logo_dark.png'
-      : '/images/logo_light.png';
+      ? '/images/logo_tagline_dark.png'
+      : '/images/logo_tagline_light.png';
 
   return (
     <div className="relative">
@@ -32,13 +32,13 @@ export default function Footer() {
                       className="w-8"
                       loader={({ src }) => src}
                     /> */}
-                    <div style={{ width: "20vw" }}>
+                    <div style={{ width: "15vw" }}>
                       <Image
                         src={logoImageSrc}
                         alt="Description"
                         layout="responsive"
-                        width={460}
-                        height={134}
+                        width={1080}
+                        height={593}
                         loader={({ src }) => src}
                       />
                     </div>

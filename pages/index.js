@@ -61,12 +61,12 @@ export default function Home() {
         </div>
         <div className="mx-[5%]">
       <SectionTitle className="break-words"  title="Oil & Gas">
-        FPSO, LNG, Offshore Jackets, Brownfield, Petrochemicals, Refinery
+        FPSO, LNG, Offshore Jackets, Petrochemicals, Refinery
       </SectionTitle>
       </div>
       <div className="mx-[5%]">
       <SectionTitle className="break-words"  title="Metals & Mining">
-        Copper smelters and heavy industries
+        Smelters & Steel Plants
       </SectionTitle>
       </div>
       <div className="mx-[5%]">
@@ -76,12 +76,12 @@ export default function Home() {
       </div>
       <div className="mx-[5%]">
       <SectionTitle className="break-words"  title="Oil & Gas">
-        FPSO, LNG, Offshore Jackets, Brownfield, Petrochemicals, Refinery
+        FPSO, LNG, Offshore Jackets, Petrochemicals, Refinery
       </SectionTitle>
       </div>
       <div className="mx-[5%]">
       <SectionTitle className="break-words"  title="Metals & Mining" >
-        Copper smelters and heavy industries
+        Smelters & Steel Plants
       </SectionTitle>
       </div>
     </AutoScrollCarousel>
@@ -94,7 +94,7 @@ export default function Home() {
       <AutoScrollCarousel scrollSpeed={1} className="my-custom-class">
         <div className="mx-[5%]">
         <SectionTitle className="break-words" title="Piping & Valves">
-          Ball, GGC, Axial Flow, Butterfly, Dual Plate Check, Control Valves, Piping Spool Fabrication.
+          Ball, GGC, Butterfly, Check, Cryo, MOV, ROV, DPCV, Piping Spool Fabrication.
         </SectionTitle>
         </div>
         <div className="mx-[5%]">
@@ -109,7 +109,7 @@ export default function Home() {
         </div>
         <div className="mx-[5%]">
         <SectionTitle className="break-words"  title="Piping & Valves">
-          Ball, GGC, Axial Flow, Butterfly, Dual Plate Check, Control Valves, Piping Spool Fabrication.
+          Ball, GGC, Butterfly, Check, Cryo, MOV, ROV, DPCV, Piping Spool Fabrication.
         </SectionTitle>
         </div>
         <div className="mx-[5%]">
@@ -144,7 +144,7 @@ export default function Home() {
       <Faq />
       <div id="AboutUs">
         <SectionTitle title="About Us">
-          At <b>ENERGY PARTNER</b>, we are more than just a supplier — we are your trusted partner in delivering <b>engineering products and end-to-end solutions</b>. With <b>over a decade of expertise</b>, our team of seasoned technocrats provides high-quality, reliable, and tailored solutions across diverse industries. Our mission is to create a <b>single-window experience</b> for customers, simplifying complexities and ensuring smooth project execution.
+          At <b>ENERGY PARTNER</b>, we specialize in liaison and project marketing consultancy for the oil & gas, power, and EPC industries. Our core mission is simple: <b>Help customers and suppliers unlock maximum value and secure the right opportunities in the market</b>. We act as your trusted partner in navigating complex tendering processes, <b>connecting with the right stakeholders, and positioning your solutions</b> where they matter most.
         </SectionTitle>
       </div>
       <div id="ContactUs" className="py-16 bg-gray-50 dark:bg-gray-900">

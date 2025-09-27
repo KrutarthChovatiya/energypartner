@@ -38,4 +38,16 @@ form {
          dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:placeholder-gray-500;
 }
 
+/* Hide scrollbar cross-browser */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+}
+
+
+

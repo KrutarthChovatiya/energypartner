@@ -27,7 +27,10 @@ import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/solid";
 // const PopupWidget = dynamic(() => import("../components/popupWidget"));
 
 
+
 export default function Home() {
+  const email = process.env.EP_MAIN;
+const phone = process.env.EP_PHONE;
   return (
     <>
       <Head>
@@ -156,7 +159,7 @@ export default function Home() {
         <div className="mt-8 flex flex-col gap-6 sm:flex-row sm:justify-center">
           {/* Email Button */}
             <a
-              href="mailto:energypartner1@outlook.com"
+              href={`mailto:${email}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-6 py-4 text-lg font-medium text-white bg-indigo-600 hover:bg-indigo-700 rounded-md transition"
@@ -167,7 +170,7 @@ export default function Home() {
 
             {/* Phone Button */}
             <a
-              href="tel:+918160547881"
+              href={`tel:${phone}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-6 py-4 text-lg font-medium text-white bg-indigo-600 hover:bg-indigo-700 rounded-md transition"

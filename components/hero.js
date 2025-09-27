@@ -6,12 +6,11 @@ const heroImg = "/images/hero.png";
 const mailImg = "/images/icons/mail.svg";
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/solid";
 
-const email = process.env.EP_MAIN;
-const phone = process.env.EP_PHONE;
-
-
 export default function Hero() {
+  const email = process.env.EP_MAIN;
+const phone = process.env.EP_PHONE;
   return (
+    
     <>
       <Container className="flex flex-wrap ">
         <div className="flex items-center w-full lg:w-1/2">

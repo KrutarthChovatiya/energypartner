@@ -7,7 +7,7 @@ const mailImg = "/images/icons/mail.svg";
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/solid";
 
 export default function Hero() {
-  const email = process.env.EP_MAIN;
+  const email = process.env.EP_MAIL;
 const phone = process.env.EP_PHONE;
   return (
     

@@ -29,8 +29,8 @@ import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/solid";
 
 
 export default function Home() {
-  const email = process.env.EP_MAIN;
-  const phone = process.env.EP_PHONE;
+  const email = process.env.NEXT_PUBLIC_EP_MAIL;
+  const phone = process.env.NEXT_PUBLIC_EP_PHONE;
   return (
     <>
       <Head>
